@@ -1,0 +1,13 @@
+name: etl_homework_2
+services:
+  nifi:
+    build: ./docker/
+    container_name: nifi
+    ports:
+      - "8443:8443"
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: admin
+    volumes:
+      - ./nifi-files:/opt/nifi/nifi-current/conf
+    restart: unless-stopped
