@@ -7,7 +7,7 @@ services:
       - "8443:8443"
     environment:
       SINGLE_USER_CREDENTIALS_USERNAME: admin
-      SINGLE_USER_CREDENTIALS_PASSWORD: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
     volumes:
-      - ./nifi-files:/opt/nifi/nifi-current/conf
-    restart: unless-stopped
+      - ./nifi-files:/opt/nifi/nifi-current/files
+    
